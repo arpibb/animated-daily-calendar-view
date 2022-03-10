@@ -4,7 +4,13 @@ import { ControlPanel } from './ControlPanel'
 import { TaskPanel } from './TaskPanel'
 import { getDailyTasks } from '../../services/taskService'
 
-const DailyCalendarViewWrapper = styled.div``
+const DailyCalendarViewWrapper = styled.div`
+  width: 250px;
+  height: 300px;
+  padding: 24px;
+  background-color: blanchedalmond;
+  border: 1px solid black;
+`
 
 export const DailyCalendarView = () => {
   const [dailyTaskData, _] = useState(getDailyTasks())
