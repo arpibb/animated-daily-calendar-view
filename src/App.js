@@ -1,4 +1,4 @@
-import { DailyCalendarView } from './DailyCalendarView'
+import { DailyCalendarView } from './components/DailyCalenderView/DailyCalendarView'
 
 const App = () => {
   return (

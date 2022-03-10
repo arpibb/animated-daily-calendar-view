@@ -6,12 +6,12 @@ const ControlPanelWrapper = styled.div`
   display: flex;
 `
 
-export const ControlPanel = () => {
+export const ControlPanel = ({ date, onClick }) => {
   return (
     <ControlPanelWrapper>
-      <Button buttonCTA={'Prev'} />
-      <Title title={'date'} />
-      <Button buttonCTA={'Next'} />
+      <Button buttonCTA={'Prev'} onClick={onClick} />
+      <Title title={date} />
+      <Button buttonCTA={'Next'} onClick={onClick} />
     </ControlPanelWrapper>
   )
 }
