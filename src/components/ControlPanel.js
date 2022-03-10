@@ -1,5 +1,5 @@
-import { Button } from './Button'
-import { Title } from './Title'
+import { Button } from './shared/Button'
+import { Title } from './shared/Title'
 import styled from 'styled-components'
 
 const ControlPanelWrapper = styled.div`
