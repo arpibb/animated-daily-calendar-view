@@ -3,10 +3,12 @@ import { Task } from './Task'
 
 const TaskPanelWrapper = styled.div``
 
-export const TaskPanel = () => {
+export const TaskPanel = ({ dailyTaskData }) => {
   return (
     <TaskPanelWrapper>
-      <Task />
+      {dailyTaskData.tasks.map((task) => {
+        return <Task taskTitle={task} />
+      })}
     </TaskPanelWrapper>
   )
 }
