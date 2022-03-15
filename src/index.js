@@ -11,17 +11,73 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    overflow: hidden;
+  }
+
+  .menu-primary-right-enter-active {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: all 200ms ease;
+  }
+
+  .menu-primary-left-enter, .menu-primary-right-enter  {
+    opacity: 0;
+    transform: translateX(0%);
+  }
+
+  .menu-primary-left-enter-active {
+    opacity: 1;
+    transform: translateX(100%);
+    transition: all 200ms ease;
+  }
+
+  .menu-primary-right-exit,  .menu-primary-left-exit {
+    opacity: 1;
+    position: absolute;
+    top: 0;
+  }
+
+  .menu-primary-right-exit-active {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 200ms ease;
+  }
+
+  .menu-primary-left-exit-active {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 200ms ease;
+  }
+
+  .menu-secondary-right-enter {
+    transform: translateX(100%);
+  }
+
+  .menu-secondary-left-enter {
+    transform: translateX(-100%);
+  }
+
+  .menu-secondary-right-enter-active, .menu-secondary-left-enter-active  {
+    transform: translateX(0%);
+    transition: all 200ms ease;
+  }
+
+  .menu-secondary-right-exit, .menu-secondary-left-exit {
+    position: absolute;
+  }
+
+  .menu-secondary-right-exit-active, .menu-secondary-left-exit-active {
+    transform: translateX(100%);
+    transition: all 200ms ease;
   }
 `
 
 export default GlobalStyle
 
 ReactDOM.render(
-  <React.StrictMode>
+  <>
     <GlobalStyle />
     <App />
-  </React.StrictMode>,
+  </>,
   document.getElementById('root')
 )
 
